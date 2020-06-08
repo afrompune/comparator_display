@@ -1,0 +1,29 @@
+<!-- <div class="row">
+    <div class="col-xs-12">
+        <app-result-item *ngFor="let resultItem of results; let i = index"
+        [result]="resultItem"
+        [id]="i">
+        </app-result-item>
+    </div>
+</div> -->
+
+<div class="row">
+    <div class="col-xs-12">
+        <a style="cursor:pointer;"
+        *ngFor="let result of results; let i = index"
+         class="list-group-item clearfix" [routerLink]="[i]" [routerLinkActive]="['active']">
+            <div class="pull-left">
+                <h4 class="list-group-item-heading">{{result.bus_dt}}</h4>
+                <p class="list-group-item-text">{{result.particular}}</p>
+                <p class="list-group-item-text">{{result.value}}</p>
+            </div>
+            <!-- <span class="pull-right">
+        <img [src]="recipe.imagePath"
+        alt="{{recipe.name}}"
+        class="img-responsive"
+        style="max-height: 50px;">
+    </span> -->
+        </a>
+        <hr>
+    </div>
+</div>
